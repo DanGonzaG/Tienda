@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- -->
+<!-- Para la creacion de formularios se usan herramientas o  freimes los ubicamos en: 
+barra de menus, Window - IDE tools - Paletts 
+Para usar una opcion solo se arrasta al area de codigo-->
+<html>
+    <head>
+        <title>Ejemplo 9 Formularios</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+
+        <a href="ejemplo8.html">Back</a>
+        <a href="index.html">Home</a>
+        <a href="ejemplo2.html">Next</a>
+
+        <h1 style="text-align: center">Ejemplo 9 Formularios</h1>
+        <h2>Registro de clientes</h2>
+        <form action="#" method="POST"> <!-- Form se usa para crear el formulario, solicia un nombre para form
+            Los registros lo mas adecuado es en un resgistro es usar la opcion POST a la hora de crearlos
+            para que asi no muestre los dato en la barra de URL de browser
+            Tambien ser puede agregar esta opcion POST colocando la sentecia method = "POST" -->
+            <label> Nombre </label> <!-- Es la etiqueta que aparece en los formularios-->
+            <input placeholder="nombre" type="text" name="TxtNombre" value=""  size="20"/> <!-- esto es un text input -->
+            <br>
+            <label> Apellido </label>
+            <input placeholder="apellido" type="text" name="TxtApellido" value=""  size="20" />
+            <br>
+            <label> Correo </label>
+            <input placeholder="correo@abc.com" type="text" name="TxtApellido" value=""  size="20" />
+            <input type="submit" value="Registro" name="btnRegistrar" /><!-- Esto es un boton -->
+        </form>
+    </body>
+</html>
