@@ -1,56 +1,109 @@
 <!DOCTYPE html><!-- linea significa que la se va a usar fomarto html-->
 <!-- signos para crear comentarios-->
 <!-- HTML utiliza texto etiquetado, es un lenguaje de etiquetas, todas las etiquetas tiene un cierre el cual se expresa con el diagonal / -->
+
+<!-- Semana 2 
+La semántica se usa para decirle a los telefonos interligentes donde ubicar los objetos mas importantes dentro de una
+página web
+Etiquetas de esta semana:
+Header = Encabezado
+nav = navegation se una para indicar un menor
+aside = barra lateral
+section = seccion encierra la parte mas importante de la pagina
+-->
+<!-- -->
 <html> <!-- esta linea indica el tipo de lenguaje-->
     <head> <!-- Encabezado de la página-->
         <title>Tienda en línea</title> <!-- el título es lo que aparece en al pestañas del buscador-->
         <meta charset="UTF-8"> <!-- indica el formato del texto, en esta caso es texto arabico con tildes-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- indica que se puede utilizar en cualquier dispositivo-->
+        
+        <!-- este en el enlace estilos css-->
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> <!-- Cuerpo de la página, es todo lo que ve el usuario-->
-        
-        
-        
-        <!-- estos links se usan para pode navegar por todas las paginas creadas-->
-        <a href="ejemplo9.html">Back</a>
-        <a href="index.html">Home</a>
-        <a href="ejemplo2.html">Next</a>
-        
-        
-        
-        
-        
-        
-        <div> <!-- div se usa para crear bloques de código-->
-            <h1>Home</h1> <!-- h1 es un ecabezado de nivel uno, es utlizado por los buscadores-->
-            <p>Bienvenidos a la página tienda en línea....</p> <!-- p significa párrafo -->
-        </div>
 
-        <!-- ejemplo de como colocar texto en al página web, este texto aparece todo junto a pesar de que se copiaron 3 párrafos
-        El texto sin sentido es muy útil para usarlo en prototipado por las personas se concentran en el formato y en lo que dice el texto
-        -->
 
-        Lorem ipsum dolor sit amet consectetur adipiscing elit conubia non platea, tempus curabitur ultrices et sem aliquet laoreet auctor lobortis, est ante diam fusce id venenatis sapien egestas lectus. Nibh ante fames nostra pellentesque curae porttitor eleifend facilisi conubia, velit justo tincidunt habitasse purus fusce leo aenean inceptos, mattis suspendisse odio himenaeos sem rhoncus torquent integer. Congue semper nullam ad cras aptent lacinia hendrerit netus natoque, nascetur eget maecenas molestie volutpat pretium facilisi per tortor lacus, magnis luctus nam taciti vitae et ut hac. Class nascetur habitasse curabitur nam vivamus praesent phasellus nullam faucibus dui vitae fringilla, ultrices cum ullamcorper sodales torquent aliquet nec ut rhoncus non.
+        <!--  HEADER O ENCABEZADO -->
+        <header><a href="index.html"><h1>TechShop</h1></a>
+            <!-- Header el enbezado, en esta linea ademas del encabezado se coloca un enlance para que de esta manera
+            cuando se click en el nombre TechShop se devuelva directamente a la pagina principal-->
 
-        Mauris nam euismod proin faucibus blandit scelerisque placerat dapibus auctor, senectus litora dui tempor facilisis ligula orci cursus velit risus, sapien habitasse pharetra sem maecenas congue duis posuere. Lectus habitant nostra platea pellentesque varius curae mus quisque eleifend, inceptos venenatis lobortis interdum magnis ullamcorper ornare phasellus pretium porttitor, mattis hac laoreet netus cras potenti facilisis fames. Posuere taciti magna fusce integer ornare pretium, mus torquent leo ullamcorper quis donec, lobortis scelerisque porta turpis malesuada. Ut metus leo suscipit turpis vivamus gravida natoque scelerisque condimentum magnis massa fermentum conubia pretium congue, lacinia nec lectus aliquam nulla duis consequat himenaeos taciti ultricies placerat tempor commodo praesent.
+            <!-- NAV O NAVEGACION-->
+            <nav>
+                <!-- estos links se usan para pode navegar por todas las paginas creadas-->
+                <!-- nav navegacion se usa para menus-->
+                <a href="ejemplo9.html"> &LeftTriangleBar; Atras</a> <!-- se coloca el & para obtener un menu con opciones -->
 
-        Parturient pretium porta sociis blandit ligula ut massa a rutrum class metus nunc, et est nisi nam pellentesque tellus consequat magnis cum quisque placerat, ultricies quis facilisi donec varius non nibh sollicitudin leo ultrices sed. Sem egestas posuere mattis primis sodales sed, phasellus ullamcorper mollis scelerisque curae porttitor, netus curabitur aliquam ut nunc. Class fringilla litora natoque orci tortor senectus sollicitudin torquent erat ornare donec sapien, tempor pharetra nascetur netus commodo facilisis fermentum rhoncus dignissim diam blandit.
+                <a href="ejemplo2.html">Siguiente &RightTriangleBar;</a> <!-- coloca un triangulo en forma de flecha -->
+                <a href="#">Nosotro</a>
+                <a href="#">Tienda</a>
+                <a href="#">Reportes</a>
+            </nav>
 
-        <!-- en este otro ejemplo se coloca los texto desdo de parrafos y de esta manera la página a la hora de cargar el código lo divide-->
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit conubia non platea, tempus curabitur ultrices et sem aliquet laoreet auctor lobortis, est ante diam fusce id venenatis sapien egestas lectus. Nibh ante fames nostra pellentesque curae porttitor eleifend facilisi conubia, velit justo tincidunt habitasse purus fusce leo aenean inceptos, mattis suspendisse odio himenaeos sem rhoncus torquent integer. Congue semper nullam ad cras aptent lacinia hendrerit netus natoque, nascetur eget maecenas molestie volutpat pretium facilisi per tortor lacus, magnis luctus nam taciti vitae et ut hac. Class nascetur habitasse curabitur nam vivamus praesent phasellus nullam faucibus dui vitae fringilla, ultrices cum ullamcorper sodales torquent aliquet nec ut rhoncus non.</p>
-        <p>Mauris nam euismod proin faucibus blandit scelerisque placerat dapibus auctor, senectus litora dui tempor facilisis ligula orci cursus velit risus, sapien habitasse pharetra sem maecenas congue duis posuere. Lectus habitant nostra platea pellentesque varius curae mus quisque eleifend, inceptos venenatis lobortis interdum magnis ullamcorper ornare phasellus pretium porttitor, mattis hac laoreet netus cras potenti facilisis fames. Posuere taciti magna fusce integer ornare pretium, mus torquent leo ullamcorper quis donec, lobortis scelerisque porta turpis malesuada. Ut metus leo suscipit turpis vivamus gravida natoque scelerisque condimentum magnis massa fermentum conubia pretium congue, lacinia nec lectus aliquam nulla duis consequat himenaeos taciti ultricies placerat tempor commodo praesent.</p>
-        <p>Parturient pretium porta sociis blandit ligula ut massa a rutrum class metus nunc, et est nisi nam pellentesque tellus consequat magnis cum quisque placerat, ultricies quis facilisi donec varius non nibh sollicitudin leo ultrices sed. Sem egestas posuere mattis primis sodales sed, phasellus ullamcorper mollis scelerisque curae porttitor, netus curabitur aliquam ut nunc. Class fringilla litora natoque orci tortor senectus sollicitudin torquent erat ornare donec sapien, tempor pharetra nascetur netus commodo facilisis fermentum rhoncus dignissim diam blandit.</p>
+        </header>
 
-        <!-- Style se usa para darle formato a los texto-->
-        <p style="text-align: left"> <!-- orientacion izquierda-->Lorem ipsum dolor sit amet consectetur adipiscing elit conubia non platea, tempus curabitur ultrices et sem aliquet laoreet auctor lobortis, est ante diam fusce id venenatis sapien egestas lectus. Nibh ante fames nostra pellentesque curae porttitor eleifend facilisi conubia, velit justo tincidunt habitasse purus fusce leo aenean inceptos, mattis suspendisse odio himenaeos sem rhoncus torquent integer. Congue semper nullam ad cras aptent lacinia hendrerit netus natoque, nascetur eget maecenas molestie volutpat pretium facilisi per tortor lacus, magnis luctus nam taciti vitae et ut hac. Class nascetur habitasse curabitur nam vivamus praesent phasellus nullam faucibus dui vitae fringilla, ultrices cum ullamcorper sodales torquent aliquet nec ut rhoncus non.</p>
-        <p style="text-align: right"><!-- orientacion derecha-->Mauris nam euismod proin faucibus blandit scelerisque placerat dapibus auctor, senectus litora dui tempor facilisis ligula orci cursus velit risus, sapien habitasse pharetra sem maecenas congue duis posuere. Lectus habitant nostra platea pellentesque varius curae mus quisque eleifend, inceptos venenatis lobortis interdum magnis ullamcorper ornare phasellus pretium porttitor, mattis hac laoreet netus cras potenti facilisis fames. Posuere taciti magna fusce integer ornare pretium, mus torquent leo ullamcorper quis donec, lobortis scelerisque porta turpis malesuada. Ut metus leo suscipit turpis vivamus gravida natoque scelerisque condimentum magnis massa fermentum conubia pretium congue, lacinia nec lectus aliquam nulla duis consequat himenaeos taciti ultricies placerat tempor commodo praesent.</p>
-        <p style="text-align: center"><!-- orientacion central-->Parturient pretium porta sociis blandit ligula ut massa a rutrum class metus nunc, et est nisi nam pellentesque tellus consequat magnis cum quisque placerat, ultricies quis facilisi donec varius non nibh sollicitudin leo ultrices sed. Sem egestas posuere mattis primis sodales sed, phasellus ullamcorper mollis scelerisque curae porttitor, netus curabitur aliquam ut nunc. Class fringilla litora natoque orci tortor senectus sollicitudin torquent erat ornare donec sapien, tempor pharetra nascetur netus commodo facilisis fermentum rhoncus dignissim diam blandit.</p>
-        <br><!--se usa para un salto de linea -->
-        <br><!--se usa para un salto de linea -->
-        <p>Última línea</p>
-        
-        
-        
+
+        <!-- ASIDE  O BARRA LATERAL-->
+        <aside>
+            <h2>Última Noticias</h2> <!-- h1 es un ecabezado de nivel uno, es utlizado por los buscadores-->
+            <p>Según el últmo reporte de ventas el XT-128 es el producto con más ventas en lo va del mes...no se quede sin su XT-128</p> <!-- p significa párrafo -->
+        </aside>
+
+        <!-- SECTION O SECCION lo que esta dentro de section es el contenido mas importante de la pagina-->
+        <section>
+            <h2>Nuestros Productos</h2>
+
+
+            <!-- ARTICLE O ARTICULO  es una etiqueda parecida a los articulo de un periodico con los que se obtiene 
+            informacion e imagenes
+            -->
+            <article>
+                <h3>TX-128</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit conubia non platea, tempus curabitur ultrices et sem aliquet laoreet auctor lobortis, est ante diam fusce id venenatis sapien egestas lectus. Nibh ante fames nostra pellentesque curae porttitor eleifend facilisi conubia, velit justo tincidunt habitasse purus fusce leo aenean inceptos, mattis suspendisse odio himenaeos sem rhoncus torquent integer. Congue semper nullam ad cras aptent lacinia hendrerit netus natoque, nascetur eget maecenas molestie volutpat pretium facilisi per tortor lacus, magnis luctus nam taciti vitae et ut hac. Class nascetur habitasse curabitur nam vivamus praesent phasellus nullam faucibus dui vitae fringilla, ultrices cum ullamcorper sodales torquent aliquet nec ut rhoncus non.</p>
+
+                <!-- ETIQUETA FIGURE se usa para poner elemento opcionales dentro de una pagina, pueden ser imagenes
+                graficos, tablas, etc
+                Son optativas por lo tanto no fundamentales-
+                Con esta etique figure hacemos que la imagen sea opcional-->
+                <figure>
+                    <!-- ETIQUETA IMG inserta imagenes
+                    el comando SRC se usa para traer imagenes desde la nuve-->
+                    
+                    <img src="https://smarttradingsource.com/include/proon/img/productos/1d5_OPPO-Realme-XT-1.png" height="150" alt="alt"/>
+                    
+                    <!-- ETIQUETA FIGCAPTION se usa para colocar mensajes en la parte inferior de la imagen-->
+                    <figcaption>₵650.000.oo <a href="Add"></a> </figcaption> 
+                </figure>            
+
+            </article>
+
+            <article>
+                <h3>DR-558</h3>
+                <p>Mauris nam euismod proin faucibus blandit scelerisque placerat dapibus auctor, senectus litora dui tempor facilisis ligula orci cursus velit risus, sapien habitasse pharetra sem maecenas congue duis posuere. Lectus habitant nostra platea pellentesque varius curae mus quisque eleifend, inceptos venenatis lobortis interdum magnis ullamcorper ornare phasellus pretium porttitor, mattis hac laoreet netus cras potenti facilisis fames. Posuere taciti magna fusce integer ornare pretium, mus torquent leo ullamcorper quis donec, lobortis scelerisque porta turpis malesuada. Ut metus leo suscipit turpis vivamus gravida natoque scelerisque condimentum magnis massa fermentum conubia pretium congue, lacinia nec lectus aliquam nulla duis consequat himenaeos taciti ultricies placerat tempor commodo praesent.</p>
+                <figure>
+                <img src="https://www.uoktok.com.br/images/dtr720-558.png" height="150" alt="alt"/>
+                <figcaption> ₡ 50,000.00 <a href="Add"> </a> </figcaption>
+                </figure>
+            </article>
+
+            <article>
+
+                <h3>VIVO-X</h3>
+                <p>Parturient pretium porta sociis blandit ligula ut massa a rutrum class metus nunc, et est nisi nam pellentesque tellus consequat magnis cum quisque placerat, ultricies quis facilisi donec varius non nibh sollicitudin leo ultrices sed. Sem egestas posuere mattis primis sodales sed, phasellus ullamcorper mollis scelerisque curae porttitor, netus curabitur aliquam ut nunc. Class fringilla litora natoque orci tortor senectus sollicitudin torquent erat ornare donec sapien, tempor pharetra nascetur netus commodo facilisis fermentum rhoncus dignissim diam blandit.</p>
+                <figure>
+                <img src="https://miphonemx.com/cdn/shop/files/10008312_1681820858722_750x750_png_800x.webp?v=1683041749" height="150" alt="alt"/>
+                <figcaption>854.000.oo <a href="Add"> </a> </figcaption>
+                </figure>
+            </article>
+
+        </section>
+
+        <!-- FOOTER O PIE  es usada para colocar redes sociales, aviso legar entre otros
+        &COPY se usa para mostrar el signo de Copyrigth-->
+        <footer>
+            Derechso Reservados 2023 &COPY;
+        </footer>
     </body>
 
 </html>

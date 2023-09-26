@@ -1,0 +1,14 @@
+/*Este es un archivo de estilos donde se colocan los formatos de manera general para las paginas
+para crea un css se crea un folder y despues se crea un archivo */
+/* 
+    Created on : 26 sep. 2023, 11:13:48
+    Author     : DanGG
+*/
+
+
+/*con esta lineas estamos diciendo que todo lo que tiene body va a tener ese color
+El archivo de estilos tiene que estar enlazado a todas la pagina HTML*/
+body{
+    background-color: bisque;
+}
+
