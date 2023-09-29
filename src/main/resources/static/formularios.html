@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html> 
+    <head> <!-- Encabezado de la página-->
+        <title>Tienda en línea</title> <!-- el título es lo que aparece en al pestañas del buscador-->
+        <meta charset="UTF-8"> <!-- indica el formato del texto, en esta caso es texto arabico con tildes-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- indica que se puede utilizar en cualquier dispositivo-->
+
+        <!-- este en el enlace estilos css-->
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body> <!-- Cuerpo de la página, es todo lo que ve el usuario-->
+
+
+        <!--  HEADER O ENCABEZADO -->
+        <header>
+            <!-- Header el enbezado, en esta linea ademas del encabezado se coloca un enlance para que de esta manera
+            cuando se click en el nombre TechShop se devuelva directamente a la pagina principal-->
+
+            <!-- NAV O NAVEGACION-->
+            <nav>
+                <a class="logo" href="index.html">TechShop</a>
+                <!-- estos links se usan para pode navegar por todas las paginas creadas-->
+                <!-- nav navegacion se usa para menus-->
+                <a href="ejemplo9.html"> &LeftTriangleBar; Atras</a> <!-- se coloca el & para obtener un menu con opciones -->
+
+                <a href="ejemplo2.html">Siguiente &RightTriangleBar;</a> <!-- coloca un triangulo en forma de flecha -->
+                <a href="#">Nosotro</a>
+                <a href="#">Tienda</a>
+                <a href="audios.html">Audios</a>
+                <a href="iFrames.html">iFrames</a>
+                <a href="videos.html">Videos</a>
+                <a href="formularios.html">Formularios</a>
+            </nav>
+
+        </header>
+
+
+
+        <!-- ASIDE  O BARRA LATERAL-->
+        <aside>
+            <br>
+            <br>
+            <h2>Última Noticias</h2> <!-- h1 es un ecabezado de nivel uno, es utlizado por los buscadores-->
+            <p>Según el últmo reporte de ventas el XT-128 es el producto con más ventas en lo va del mes...no se quede sin su XT-128</p> <!-- p significa párrafo -->
+        </aside>
+
+        <!-- SECTION O SECCION lo que esta dentro de section es el contenido mas importante de la pagina-->
+        <section>
+            <h2>Ejemplo de formularios</h2>
+
+
+            <!-- ARTICLE O ARTICULO  es una etiqueda parecida a los articulo de un periodico con los que se obtiene 
+            informacion e imagenes
+            -->
+            <article>
+                <h3>Pagina de registro</h3>
+                <form action="/usuarios/registro"
+                      method="post"
+                      >
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td>Usuario</td>
+                                <td><input type="email" 
+                                           required="true"
+                                           name="txtUsuario" value="" size="25" /></td>
+                            </tr>
+                            <tr>
+                                <td>Clave</td>
+                                <td><input type="password" 
+                                           required="true"
+                                           name="txtClave" value="" size="45" /></td>
+                            </tr>
+                            <tr>
+                                <td>Nombre</td>
+                                <td><input type="text" 
+                                           required="true"
+                                           name="txtNombre" value="" size="45" /></td>
+                            </tr>
+                            <tr>
+                                <td>Edad</td>
+                                <td><input type="number" name="txtEdad" value="" size="3" /></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" value="Registrar" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+                </form>
+
+
+
+
+            </article>
+
+        </section>
+
+        <footer>
+            Derechso Reservados 2023 &COPY;
+        </footer>
+    </body>
+
+</html>

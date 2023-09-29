@@ -17,28 +17,35 @@ section = seccion encierra la parte mas importante de la pagina
         <title>Tienda en línea</title> <!-- el título es lo que aparece en al pestañas del buscador-->
         <meta charset="UTF-8"> <!-- indica el formato del texto, en esta caso es texto arabico con tildes-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- indica que se puede utilizar en cualquier dispositivo-->
-        
+
         <!-- este en el enlace estilos css-->
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body> <!-- Cuerpo de la página, es todo lo que ve el usuario-->
 
 
-        <!--  HEADER O ENCABEZADO -->
-        <header><a href="index.html"><h1>TechShop</h1></a>
-            <!-- Header el enbezado, en esta linea ademas del encabezado se coloca un enlance para que de esta manera
-            cuando se click en el nombre TechShop se devuelva directamente a la pagina principal-->
 
+        <header>
             <!-- NAV O NAVEGACION-->
-            <nav>
-                <!-- estos links se usan para pode navegar por todas las paginas creadas-->
-                <!-- nav navegacion se usa para menus-->
-                <a href="ejemplo9.html"> &LeftTriangleBar; Atras</a> <!-- se coloca el & para obtener un menu con opciones -->
+            <nav class="nav">
+                <a class="logo nav-link" href="index.html">TechShop</a>
 
-                <a href="ejemplo2.html">Siguiente &RightTriangleBar;</a> <!-- coloca un triangulo en forma de flecha -->
-                <a href="#">Nosotro</a>
-                <a href="#">Tienda</a>
-                <a href="#">Reportes</a>
+
+                <ul>
+                    <!-- estos links se usan para pode navegar por todas las paginas creadas-->
+                    <!-- nav navegacion se usa para menus-->
+                    <a class="nav-link" href="ejemplo9.html"> &LeftTriangleBar; Atras</a> <!-- se coloca el & para obtener un menu con opciones -->
+
+                    <a class="nav-link" href="ejemplo2.html">Siguiente &RightTriangleBar;</a> <!-- coloca un triangulo en forma de flecha -->
+                    <a class="nav-link" href="#">Nosotro</a>
+                    <a class="nav-link" href="#">Tienda</a>
+                    <a class="nav-link" href="#">Reportes</a>
+                    <a class="nav-link" href="audios.html">Audios</a>
+                    <a class="nav-link" href="iFrames.html">iFrames</a>
+                    <a class="nav-link" href="videos.html">Videos</a>
+                    <a class="nav-link" href="formularios.html">Formularios</a>
+                </ul>
+
             </nav>
 
         </header>
@@ -69,9 +76,9 @@ section = seccion encierra la parte mas importante de la pagina
                 <figure>
                     <!-- ETIQUETA IMG inserta imagenes
                     el comando SRC se usa para traer imagenes desde la nuve-->
-                    
+
                     <img src="https://smarttradingsource.com/include/proon/img/productos/1d5_OPPO-Realme-XT-1.png" height="150" alt="alt"/>
-                    
+
                     <!-- ETIQUETA FIGCAPTION se usa para colocar mensajes en la parte inferior de la imagen-->
                     <figcaption>₵650.000.oo <a href="Add"></a> </figcaption> 
                 </figure>            
@@ -82,8 +89,8 @@ section = seccion encierra la parte mas importante de la pagina
                 <h3>DR-558</h3>
                 <p>Mauris nam euismod proin faucibus blandit scelerisque placerat dapibus auctor, senectus litora dui tempor facilisis ligula orci cursus velit risus, sapien habitasse pharetra sem maecenas congue duis posuere. Lectus habitant nostra platea pellentesque varius curae mus quisque eleifend, inceptos venenatis lobortis interdum magnis ullamcorper ornare phasellus pretium porttitor, mattis hac laoreet netus cras potenti facilisis fames. Posuere taciti magna fusce integer ornare pretium, mus torquent leo ullamcorper quis donec, lobortis scelerisque porta turpis malesuada. Ut metus leo suscipit turpis vivamus gravida natoque scelerisque condimentum magnis massa fermentum conubia pretium congue, lacinia nec lectus aliquam nulla duis consequat himenaeos taciti ultricies placerat tempor commodo praesent.</p>
                 <figure>
-                <img src="https://www.uoktok.com.br/images/dtr720-558.png" height="150" alt="alt"/>
-                <figcaption> ₡ 50,000.00 <a href="Add"> </a> </figcaption>
+                    <img src="https://www.uoktok.com.br/images/dtr720-558.png" height="150" alt="alt"/>
+                    <figcaption> ₡ 50,000.00 <a href="Add"> </a> </figcaption>
                 </figure>
             </article>
 
@@ -92,8 +99,8 @@ section = seccion encierra la parte mas importante de la pagina
                 <h3>VIVO-X</h3>
                 <p>Parturient pretium porta sociis blandit ligula ut massa a rutrum class metus nunc, et est nisi nam pellentesque tellus consequat magnis cum quisque placerat, ultricies quis facilisi donec varius non nibh sollicitudin leo ultrices sed. Sem egestas posuere mattis primis sodales sed, phasellus ullamcorper mollis scelerisque curae porttitor, netus curabitur aliquam ut nunc. Class fringilla litora natoque orci tortor senectus sollicitudin torquent erat ornare donec sapien, tempor pharetra nascetur netus commodo facilisis fermentum rhoncus dignissim diam blandit.</p>
                 <figure>
-                <img src="https://miphonemx.com/cdn/shop/files/10008312_1681820858722_750x750_png_800x.webp?v=1683041749" height="150" alt="alt"/>
-                <figcaption>854.000.oo <a href="Add"> </a> </figcaption>
+                    <img src="https://miphonemx.com/cdn/shop/files/10008312_1681820858722_750x750_png_800x.webp?v=1683041749" height="150" alt="alt"/>
+                    <figcaption>854.000.oo <a href="Add"> </a> </figcaption>
                 </figure>
             </article>
 
