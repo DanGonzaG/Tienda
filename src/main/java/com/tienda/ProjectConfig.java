@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/*se crea un nuevo java.class en este se crea todo lo necesario para hacer el lenguaje pueda ser cambiado*/
 package com.tienda;
 
 import java.util.Locale;
@@ -17,25 +14,27 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
  *
  * @author DanGG
  */
-@Configuration
-public class ProjectConfig implements WebMvcConfigurer{
-   @Bean
-   public LocaleResolver localeResolver (){
-       var slr = new SessionLocaleResolver();
-       slr.setDefaultLocale(Locale.getDefault());
-       slr.setTimeZoneAttributeName("session.current.locale");
-       slr.setTimeZoneAttributeName("session.current.timezone");       
-   return slr;}
+@Configuration //colocar un @ se una para hacer anotaciones despues importa la clases configuration
+public class ProjectConfig implements WebMvcConfigurer{ //la clase configuracion implementa WebMvcConfigurer y despues de importa la clase
+   @Bean //se crea la anotacion Bean, Bean es una seña para manterner el metodo activo mientra se este ejecutando, este bean tambien debe de importarse
+   public LocaleResolver localeResolver (){ /* se crea el metodo LocaleResolver con el nombre localeResolver despues de debe de importar la clase LocaleResolver se debe de
+       de importar el segundo el que tiene el nombre web.servlet.LocaleResolver*/
+       var slr = new SessionLocaleResolver();//var es una instancia que se asigna el nombre slr, lo que hace es un RESOLUTOR DE SESIONES DE UBICACION, tambien de debe de importar
+       slr.setDefaultLocale(Locale.getDefault());//se crea una sesion local por defecto dentro de los parentesis de coloca Locale.getDefault, esta tambien debe de importarse
+       slr.setTimeZoneAttributeName("session.current.locale");//esta instruccion indica cual es la ubicacion que reporta el browser
+       slr.setTimeZoneAttributeName("session.current.timezone");//Indica cual es la zona horaria que reporta el browser
+   return slr;}//se retorna la slr
     
-   @Bean
-   public LocaleChangeInterceptor localcChangeInterceptor(){
-       var lci = new LocaleChangeInterceptor();
-       lci.setParamName("lang");
-   return lci;}
+   @Bean//se crea otra anotacion de Bean
+   public LocaleChangeInterceptor localcChangeInterceptor(){//se crea un metodo de tipo LocaleChageInterceptor con el nombre y se debe de importra
+       var lci = new LocaleChangeInterceptor(); // de instacia otro var pero con el un new LocaleChangeInterceptor 
+       lci.setParamName("lang");//de debe de definir un nombre de variable
+   return lci;}// se retorna lci
    
    
-   @Override
-   public void addInterceptors (InterceptorRegistry registro){
-       registro.addInterceptor(localcChangeInterceptor());
+   @Override//se hace una anotacion override
+   public void addInterceptors (InterceptorRegistry registro){ /*se crea un metodo void con el nomobre addInterceptors, dentro de los parametos del metodo se crea un 
+       interceptorRegistry (debe de ser importado) con el nombre registro */      
+       registro.addInterceptor(localcChangeInterceptor()); //La funsion de este metodo es agregar un registro al interceptor y el interceptor que se agrega es el localcChangeInterceptor()
    } 
 }
