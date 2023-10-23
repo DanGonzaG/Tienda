@@ -7,6 +7,7 @@ package com.tienda.service.impl;
 import com.tienda.dao.CategoriaDao;
 import com.tienda.domain.Categoria;
 import com.tienda.service.CategoriaService;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,27 @@ public class CategoriaServiceImpl implements CategoriaService{
     @Override
     public List<Categoria> getCategorias(boolean activo) {
        var categorias = categoriaDao.findAll(); //En categroiasDao se depliega opciones se debe de escoger u  findAll porque retorna categoria
+        if (activo) {
+            categorias.removeIf(e -> !e.getActivo());
+        }
     return categorias;}
+    
+     @Override
+    @Transactional(readOnly = true)
+    public Categoria getCategoria(Categoria categoria) {
+        return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void save(Categoria categoria) {
+        categoriaDao.save(categoria);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Categoria categoria) {
+        categoriaDao.delete(categoria);
+    }
     
 }

@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-    
+
     <head th:replace="~{layout/plantilla :: head}"><!--dentro de la etiqueta de head creamos un ruta para llamar la plantilla
         creada. El codigo dice que reemplace head por el fragmento en el plantilla
         th:replace es al instruccion
@@ -14,8 +14,13 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/> <!-- se crea un fragmento que llama header de body-->
-        <footer th:replace="~{layout/plantilla :: footer}"/>
-            
-      
+
+        <section th:replace="~{producto/fragmentos :: editarProducto}"/>
+        
+
+
+        <footer th:replace="~{layout/plantilla :: footer}" />
+
+
     </body>
 </html>

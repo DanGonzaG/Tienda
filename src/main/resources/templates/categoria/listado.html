@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-    
+
     <head th:replace="~{layout/plantilla :: head}"><!--dentro de la etiqueta de head creamos un ruta para llamar la plantilla
         creada. El codigo dice que reemplace head por el fragmento en el plantilla
         th:replace es al instruccion
@@ -14,29 +14,14 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/> <!-- se crea un fragmento que llama header de body-->
-        <!-- comment -->
-        <!<!-- se inserta una tabla -->
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id</th> <!-- aca se colocan los titulos de cada columna -->
-                    <th>Descripcion</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="categoria : ${categorias}"> <!-- tr signifaca table row o fila de la tabla. La instruccion th:each 
-                    quiere decir que cada elemento categoria que esta en la lista categorias. categorias es el listado que se paso 
-                    por el model en la CategoriaServicelmpl-->
-                    <td>[[${categoria.idCategoria}]]</td>
-                    <td>[[${categoria.descripcion}]]</td>
-                </tr>
-            </tbody>
-        </table>
 
-        
-        
-        <footer th:replace="~{layout/plantilla :: footer}"/ >
-            
-      
+        <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/>
+        <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/>
+        <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/>
+
+
+        <footer th:replace="~{layout/plantilla :: footer}" />
+
+
     </body>
 </html>
