@@ -12,23 +12,23 @@ import org.hibernate.annotations.GeneratorType;
  */
 @Data // se hace la anotacio de data para asi espificar que la clase va a tener datos, se debe de importar la lombok.Data
 @Entity // se hace una anotacion Entity, esto dice que la clase va a ser un entidad de una tabla de base de datos, se de importar jakarta.persistence.*
-@Table (name = "producto") // se la anotacion Table para crear la realacion entre la clase Producto y la tabla producto, con esto la clase va a tener mapada la tabla Producto
+@Table(name = "producto") // se la anotacion Table para crear la realacion entre la clase Producto y la tabla producto, con esto la clase va a tener mapada la tabla Producto
 //se debe de implementar el Serializable, lo hace es salvar la informacion optenida de la clase hacia la base de datos de serial por medio de la red
-public class Producto implements Serializable{
+public class Producto implements Serializable {
+
     /* id_producto INT NOT NULL AUTO_INCREMENT, 
   descripcion VARCHAR(30) NOT NULL,
   ruta_imagen varchar(1024), 
   activo bool,*/
-    
+
     private static final long serialVersionUID = 1L;//linea para generar la numeracion de los idProducto
-    
+
     //---------------------------------------------------------DEFINICION DE LA VARIABLE Y SU RELACION CON LA TABLA
     @Id // con esta anotacion se especifica que idProducto es una llaverPrimaria
-    @GeneratedValue (strategy = GenerationType.IDENTITY)/*anotacion para que genere valores incrementales , dentro de strategy se escoge la opcion GenerationType.IDENTITY
+    @GeneratedValue(strategy = GenerationType.IDENTITY)/*anotacion para que genere valores incrementales , dentro de strategy se escoge la opcion GenerationType.IDENTITY
      y con esto logramos hacer que los valores asiganados en idProducto sean IDENTITY*/
     @Column(name = "id_producto")//anotacion para decir como se llama el atributo en la base de dato y su relacion con el varible en la clase de java
-    
-    
+
     /*id_producto INT NOT NULL AUTO_INCREMENT,
   id_categoria INT NOT NULL,
   descripcion VARCHAR(30) NOT NULL,  
@@ -41,23 +41,16 @@ public class Producto implements Serializable{
   foreign key fk_producto_caregoria (id_categoria) references categoria(id_categoria)  
 )*/
     private Long idProducto;
-    private int idCategoria;
+    //private int idCategoria;
     private String descripcion;
     private String detalle;
     private double precio;
     private int existencias;
     private String rutaImagen;
-    private  Boolean activo;
-    
-    public Producto(){
-        
-    }
+    private Boolean activo;
 
-    public Producto(String descripcion, Boolean activo) {
-        this.descripcion = descripcion;
-        this.activo = activo;
-    }
-    
-    
+    @ManyToOne
+    @JoinColumn (name="id_categoria")
+    Categoria categoria;
     
 }
