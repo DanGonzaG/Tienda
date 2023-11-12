@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -48,6 +50,25 @@ public class PruebasController {
         model.addAttribute("totalProductos", productos.size());
         model.addAttribute("categorias", categorias);
         return "/pruebas/listado";
+    }
+    
+     @GetMapping("/listado2")
+    public String listado2(Model model) {
+        var productos = productoService.getProductos(false);
+        model.addAttribute("productos", productos); //con esta intruccion se va pasar todo de var productos hacia un pagina html que va a conocer una variable llamada "productos"       
+
+        return "/pruebas/listado2";
+    }
+    
+    @PostMapping("/query1")
+    public String consulta1(
+            @RequestParam (value = "precioInf")double precioInf,//el RequestParam lo que hace es usar variable independientes 
+            @RequestParam (value = "precioSup") double precioSup,
+            Model model) {
+        var productos = productoService.consultaQuery(precioInf, precioSup);
+        model.addAttribute("productos", productos);     
+
+        return "/pruebas/listado2";
     }
 
 }

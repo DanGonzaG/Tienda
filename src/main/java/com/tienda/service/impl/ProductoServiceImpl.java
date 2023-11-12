@@ -16,25 +16,24 @@ import org.springframework.stereotype.Service;
  *
  * @author DanGG
  */
-
- @Service // anotacion para decir que la clase ProductoServiceImpl es un servicio
+@Service // anotacion para decir que la clase ProductoServiceImpl es un servicio
 //Se crea la clase ProductoServiceImpl y se le implementa un ProductoService que es nuestra interfaz
-public class ProductoServiceImpl implements ProductoService{
-    
-    
+public class ProductoServiceImpl implements ProductoService {
+
     @Autowired // esta anotacion se usa para enlasar un objeto    
     private ProductoDao productoDao;
 
     //Se crea un metodo Override y se le elimana el throw 
     @Override
     public List<Producto> getProductos(boolean activo) {
-       var productos = productoDao.findAll(); //En categroiasDao se depliega opciones se debe de escoger u  findAll porque retorna producto
+        var productos = productoDao.findAll(); //En categroiasDao se depliega opciones se debe de escoger u  findAll porque retorna producto
         if (activo) {
             productos.removeIf(e -> !e.getActivo());
         }
-    return productos;}
-    
-     @Override
+        return productos;
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public Producto getProducto(Producto producto) {
         return productoDao.findById(producto.getIdProducto()).orElse(null);
@@ -51,5 +50,11 @@ public class ProductoServiceImpl implements ProductoService{
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
-    
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> consultaQuery(double precioInf, double precioSup) {
+    return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+    }
+
 }

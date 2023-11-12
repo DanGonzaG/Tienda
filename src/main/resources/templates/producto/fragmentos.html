@@ -48,7 +48,7 @@
 
                                 <div class="mb-3">
                                     <label for="categoria">[[#{producto.categoria}]]</label>
-                                    <select class="form-select" aria-label="Default select example" name="idCategoria">    
+                                    <select class="form-select" aria-label="Default select example" name="categoria.idCategoria">    
                                         <option th:each="c : ${categorias}" th:value="${c.idCategoria}" th:text="${c.descripcion}">
                                         </option>                                      
                                     </select>
@@ -179,14 +179,12 @@
 
                                                 <div class="mb-3">
                                                     <label for="categoria">[[#{producto.categoria}]]</label>
-                                                    <!-- comment <input type="text" class="form-control" 
-                                                           name="categoria" th:field="*{idCategoria}"
-                                                           required="true">-->
+                                                    <select class="form-select" aria-label="Default select example" name="categoria.idCategoria">    
+                                                        <option th:each="c : ${categorias}" th:value="${c.idCategoria}" th:text="${c.descripcion}">
+                                                        </option>                                      
+                                                    </select>
 
-                                                        <select class="form-select" aria-label="Default select example" name="idCategoria">    
-                                                            <option th:each="s : ${categorias}" th:value="${s.idCategoria}" th:text="${s.descripcion}">
-                                                            </option>                                      
-                                                        </select>
+                                                
 
                                                 </div>
 
@@ -204,8 +202,8 @@
                                                            name="precio" th:field="*{precio}"
                                                            required="true">
                                                 </div>
-                                                
-                                              <div class="mb-3">
+
+                                                <div class="mb-3">
                                                     <label for="precio">[[#{producto.precio}]]</label>
                                                     <input type="number" class="form-control" 
                                                            name="precio" th:field="*{precio}"
@@ -255,8 +253,8 @@
                             <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
                         </a>
                     </div>
-                    
-           
+
+
                     <div class="col-md-4 d-grid"><button type="submit" class="btn btn-success">                          
                             <i class="fas fa-check"></i> [[#{accion.guardar}]]
                         </button>
