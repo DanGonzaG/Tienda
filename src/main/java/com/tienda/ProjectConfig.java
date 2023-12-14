@@ -1,4 +1,5 @@
 /*se crea un nuevo java.class en este se crea todo lo necesario para hacer el lenguaje pueda ser cambiado*/
+
 package com.tienda;
 
 import java.util.Locale;

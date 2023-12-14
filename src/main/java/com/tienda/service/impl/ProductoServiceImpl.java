@@ -28,7 +28,7 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> getProductos(boolean activo) {
         var productos = productoDao.findAll(); //En categroiasDao se depliega opciones se debe de escoger u  findAll porque retorna producto
         if (activo) {
-            productos.removeIf(e -> !e.getActivo());
+            productos.removeIf(e -> !e.isActivo());
         }
         return productos;
     }
